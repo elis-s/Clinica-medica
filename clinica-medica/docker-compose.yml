@@ -1,0 +1,11 @@
+# Sobe apenas o PostgreSQL (opcional - pode usar um PostgreSQL ja instalado)
+services:
+  postgres:
+    image: postgres:16
+    container_name: clinica-postgres
+    environment:
+      POSTGRES_DB: clinica
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
